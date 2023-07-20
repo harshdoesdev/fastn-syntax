@@ -6,7 +6,7 @@
     "vscode": "^1.0.0"
   },
   "repository": "https://github.com/harshdoesdev/fastn-syntax",
-  "categories": ["Languages"],
+  "categories": ["Programming Languages"],
   "license": "MIT",
   "contributes": {
     "languages": [
