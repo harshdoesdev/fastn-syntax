@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "FifthTry Document (.ftd)",
+  "fileTypes": ["ftd"],
+  "scopeName": "source.ftd",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#section_line"
+    },
+    {
+      "include": "#key_value_pair"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "match": "^--\\s+",
+          "name": "comment"
+        }
+      ]
+    },
+    "section_line": {
+      "patterns": [
+        {
+          "match": "^.*?(:)( *)(.*?)(;;\\s*<hl>\\s*)$",
+          "captures": {
+            "1": { "name": "entity.name.class" },
+            "3": { "name": "string" }
+          }
+        },
+        {
+          "match": "^.*?(:)( *)(.*)$",
+          "captures": {
+            "1": { "name": "entity.name.class" },
+            "3": { "name": "string" }
+          }
+        }
+      ]
+    },
+    "key_value_pair": {
+      "patterns": [
+        {
+          "match": "^(.*?)(:)( *)(.*?)(;;\\s*<hl>\\s*)$",
+          "captures": {
+            "1": { "name": "storage.type.function" },
+            "3": { "name": "comment" },
+            "4": { "name": "constant.character" }
+          }
+        },
+        {
+          "match": "^(.*?)(:)( *)(.*)$",
+          "captures": {
+            "1": { "name": "storage.type.function" },
+            "3": { "name": "comment" }
+          }
+        }
+      ]
+    }
+  }
+}

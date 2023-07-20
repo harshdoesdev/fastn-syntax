@@ -1,0 +1,20 @@
+{
+  "name": "fastn-syntax",
+  "version": "0.0.3",
+  "publisher": "FifthTry private limited",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": ["Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ftd",
+        "aliases": ["FifthTry Document"],
+        "extensions": ["ftd"],
+        "configuration": "./language-configuration.json",
+        "filename": "./syntax/ftd.tmLanguage.json"
+      }
+    ]
+  }
+}
