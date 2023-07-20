@@ -23,6 +23,7 @@
         "scopeName": "source.ftd",
         "path": "./syntax/ftd.tmLanguage.json"
       }
-    ]
+    ],
+    "icon": "resources/logo@2x.png"
   }
 }

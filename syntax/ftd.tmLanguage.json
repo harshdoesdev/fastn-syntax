@@ -165,20 +165,6 @@
       }
     },
     {
-      "name": "variable.access.ftd",
-      "match": "\\$\\w+",
-      "captures": {
-        "0": { "name": "variable.other.dollar-sign.ftd" }
-      }
-    },
-    {
-      "name": "variable.processor.ftd",
-      "match": "\\$\\w+\\$",
-      "captures": {
-        "0": { "name": "variable.other.dollar-sign.processor.ftd" }
-      }
-    },
-    {
       "name": "variable.internal.ftd",
       "match": "\\$inherited\\$",
       "captures": {
@@ -186,12 +172,26 @@
       }
     },
     {
+      "name": "variable.processor.ftd",
+      "match": "\\$\\w+\\$",
+      "captures": {
+        "0": { "name": "variable.other.processor.ftd" }
+      }
+    },
+    {
       "name": "variable.loop.ftd",
       "match": "\\$\\w+\\$\\s+\\w+\\s+(as)\\s+\\w+",
       "captures": {
-        "0": { "name": "variable.other.dollar-sign.processor.ftd" },
+        "0": { "name": "variable.other.loop.ftd" },
         "2": { "name": "keyword.other.loop.as.ftd" },
         "3": { "name": "variable.other.loop.name.ftd" }
+      }
+    },
+    {
+      "name": "variable.access.ftd",
+      "match": "\\$\\w+\\b",
+      "captures": {
+        "0": { "name": "variable.other.dollar-sign.ftd" }
       }
     }
   ],
